@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="h1">Tic Tac Toe</h1>
+
+
+        <div class="container">
+             <div id="gameboard"></div>
+       </div>
+
+
+    <div id="controls">
+        <input type="text" id="player1" placeholder="player 1 Name"><br>
+        <input type="text" id="player2" placeholder="player 2 Name"><br><br>
+        <!-- <button id="start-button">Start Game</button> -->
+        <button id="start-button" onclick="toggleGameboard()">Start Game</button>
+        <button id="restart-button">Restart</button>
+    </div>
+    <div id="message"></div>
+    <div id="result-display"></div>
+    <script src="index.js"></script>
+</body>
+</html>
