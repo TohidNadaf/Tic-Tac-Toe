@@ -1,0 +1,224 @@
+#h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    /* border: 2px solid black; */
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* #gameboard{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+
+} */
+#gameboard {
+    height: 345px;
+    display: none; /* Hide the game board initially */
+     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    /* box-shadow: 5px 5px 15px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 10); /* Add a subtle box shadow */
+}
+#gameboard:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}
+ 
+.square{
+    border: 0.1px solid black;
+    width: 32%;
+    flex-wrap: wrap;
+    display: flex;
+    height: 33%;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+/* #controls{
+    display: grid;
+    justify-content: center;
+    gap: 7px;
+
+} */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the input fields vertically */
+    gap: 7px;
+    margin-top: 20px; /* Add some space at the top */
+    border: 0.5px solid black;
+    margin-left: 550px;
+  margin-right: 550px;
+  height: 154px;
+  box-shadow: 10px 10px 30px;
+  border-radius: 10px;
+}
+#player1{
+    border-radius: 10px;
+    margin: 10px;
+    background: transparent;
+}
+#player2{
+    border-radius: 10px;
+    background: transparent;
+}
+
+#message{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+}
+body{
+    height: 100vh;
+    background-image: url(123.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+
+}
+#start-button{
+    height: 43px;
+  width: 107px;
+  box-shadow: 2px 1px 2px;
+} 
+#restart-button{
+    box-shadow: 1px 1px 2px;
+}
+.square:hover {
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition for background color */
+}
+
+
+
+
+
+
+
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352; */
+
+  
+  --color-primary: #1e2229;
+  --color-secondary: #1d2127;
+  --color-tertiary: #313336;
+  --color-quaternary: #4b4d50;
+  --color-quinary: #6f7175;
+  
+ 
+}
+
+
+#h1 {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  //color: transparent;
+  //background-color: white;
+  //background-clip: text;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+
+
+
